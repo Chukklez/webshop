@@ -3,12 +3,21 @@ const port = 8000;
 const express = require('express');
 const lowdb = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
-const adapter = new FileSync ('products.json')
-const db = lowdb(adapter);
+const adapter = new FileSync ('./products.json')
+db = lowdb(adapter);
 const app = express();
 const handler = require('./handler')
 app.use(express.json());
 
+//lowdb defaults
+function initdb() {
+    db.defaults({
+      products: [],
+      cart: [],
+    }).write();
+  }
+
+  initdb();
 
 //This is where we GET our products
 app.get('/api/products',(req, res) => {
@@ -24,16 +33,10 @@ app.get('/api/cart',(req, res) => {
     res.json(cart);
 });
 
-
 // This is where we POST a product to our cart
 app.post('/api/cart/:id', (req, res) => {
     handler.add(req, res);
 });
-
-// app.post ('get the id from the url', (req, res) => {
-//     read content from products based on id 
-//     add that product to our cart
-// });
 
 
 
