@@ -1,0 +1,45 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "LG 65 CX 4K OLED TV OLED65CX",
+            "price": "19490",
+            "image":"https://www.elgiganten.se/image/dv_web_D180001002410610/153748/lg-65-cx-4k-oled-tv-oled65cx-2020.jpg?$fullsize$"
+
+        },
+        {
+            "id": 2,
+            "name": "Sonos Roam bärbar trådlös högtalare",
+            "price": "1990",
+            "image":"https://www.elgiganten.se/image/dv_web_D180001002712170/297783/sonos-roam-barbar-tradlos-hogtalare-shadow-black.jpg?$fullsize$"
+        },
+        {
+            "id": 3,
+            "name": "Electrolux PerfectCare 600 tvättmaskin EW6F6268N3",
+            "price": "4995",
+            "image":"http://https://www.elgiganten.se/image/dv_web_D180001002709977/204673/electrolux-perfectcare-600-tvattmaskin-ew6f6268n3.jpg?$fullsize$"
+        },
+        {
+            "id": 4,
+            "name": "Samsung kylskåp/frys RL34T602FS9EF",
+            "price": "4795",
+            "image":"https://www.elgiganten.se/product/vitvaror/kyl-och-frys/kyl-frys-kombiskap/173106/samsung-kylskapfrys-rl34t602fs9ef-stal"
+
+        },
+        {
+            "id": 5,
+            "name": "Electrolux SilentPerformer dammsugare ESP74DB",
+            "price": "995",
+            "image":"https://www.elgiganten.se/image/dv_web_D180001002180459/12230/electrolux-silentperformer-dammsugare-esp74db.jpg?$fullsize$"
+
+        },
+        {
+            "id": 6,
+            "name": "Samsung Galaxy Book Pro 360 13 2-i-1 i5/8GB/256GB",
+            "price": "12490",
+            "image":"https://www.elgiganten.se/image/dv_web_D180001002742275/310166/samsung-galaxy-book-pro-360-13-2-i-1-i58gb256gb.jpg?$fullsize$"
+
+        }
+    ],
+    "cart": []
+}
