@@ -19,7 +19,7 @@ function initdb() {
 
   initdb();
 
-//This is where we GET our products
+//This is where we GET the contents of our products
 app.get('/api/products',(req, res) => {
     const products = db.get('products').value()
     res.json(products);
@@ -41,7 +41,7 @@ app.delete('/api/cart/:id',(req, res) => {
     handler.remove(req, res);
 });
 
-
+//Listening to the port with a console.log to confirm that it works
 app.listen(port,() => {
     console.log(`Server started on port: ${port}`);
 });
