@@ -4,10 +4,31 @@ function add(req, res){
     const product = db.get('products')
     .find({id: productId})
     .value();
+    const cart = db.get('cart')
+    .find({id: productId})
+    .value();
 
-    const result = db.get('cart')
-    .push(product)
-    .write();
+    const result = {
+        Success: true
+    }
+    //If the product isn't in products then return Product doesn't exist
+    if(!product){
+        result.Success = false;
+        result.message = `Product doesn't exist!`
+    }
+    //If the product is in the cart then return that the product is already in the cart
+    if (cart){
+        result.Success = false;
+        result.message = `Product already in cart!`
+    }
+    //If the product is in products but not in cart then add the product to the cart
+    if (product && !cart) {
+        result.Success = true;
+        result.message = `Added Product!`
+        db.get('cart')
+        .push(product)
+        .write();
+    }
     
     res.json(result);
 }
