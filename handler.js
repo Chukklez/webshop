@@ -12,4 +12,16 @@ function add(req, res){
     res.json(result);
 }
 
+//Created a function that removes a prodct from the cart then returns the new cart
+function remove(req, res){
+    const productId = req.params.id;
+    const cart = db.get('cart')
+    .remove({id: productId})
+    .write()
+
+    res.json(cart);
+}
+
+//exports my functions
 exports.add = add
+exports.remove = remove

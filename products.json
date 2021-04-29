@@ -55,6 +55,18 @@
       "name": "Samsung Galaxy Book Pro 360 13 2-i-1 i5/8GB/256GB",
       "price": "12490",
       "image": "https://www.elgiganten.se/image/dv_web_D180001002742275/310166/samsung-galaxy-book-pro-360-13-2-i-1-i58gb256gb.jpg?$fullsize$"
+    },
+    {
+      "id": "4",
+      "name": "Samsung kylskåp/frys RL34T602FS9EF",
+      "price": "4795",
+      "image": "https://www.elgiganten.se/product/vitvaror/kyl-och-frys/kyl-frys-kombiskap/173106/samsung-kylskapfrys-rl34t602fs9ef-stal"
+    },
+    {
+      "id": "5",
+      "name": "Electrolux SilentPerformer dammsugare ESP74DB",
+      "price": "995",
+      "image": "https://www.elgiganten.se/image/dv_web_D180001002180459/12230/electrolux-silentperformer-dammsugare-esp74db.jpg?$fullsize$"
     }
   ]
 }

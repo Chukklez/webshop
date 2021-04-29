@@ -3,10 +3,10 @@ const port = 8000;
 const express = require('express');
 const lowdb = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
-const adapter = new FileSync ('./products.json')
-db = lowdb(adapter);
+const adapter = new FileSync ('./products.json');
+const db = lowdb(adapter);
 const app = express();
-const handler = require('./handler')
+const handler = require('./handler');
 app.use(express.json());
 
 //lowdb defaults
@@ -22,14 +22,12 @@ function initdb() {
 //This is where we GET our products
 app.get('/api/products',(req, res) => {
     const products = db.get('products').value()
-    console.log(products);
     res.json(products);
 });
 
 //This is where we GET the contents of our cart
 app.get('/api/cart',(req, res) => {
     const cart = db.get('cart').value()
-    console.log(cart);
     res.json(cart);
 });
 
@@ -38,6 +36,10 @@ app.post('/api/cart/:id', (req, res) => {
     handler.add(req, res);
 });
 
+//This is where we DELETE a product from our cart
+app.delete('/api/cart/:id',(req, res) => {
+    handler.remove(req, res);
+});
 
 
 app.listen(port,() => {
