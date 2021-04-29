@@ -16,6 +16,12 @@ app.get('/api/products',(req, res) => {
     res.json(products);
 });
 
+//This is where we GET the contents of our cart
+app.get('/api/cart',(req, res) => {
+    const cart = db.get('cart').value()
+    console.log(cart);
+    res.json(cart);
+});
 
 
 
