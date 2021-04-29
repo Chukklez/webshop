@@ -4,7 +4,7 @@ const express = require('express');
 const lowdb = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync ('./products.json');
-const db = lowdb(adapter);
+db = lowdb(adapter);
 const app = express();
 const handler = require('./handler');
 app.use(express.json());

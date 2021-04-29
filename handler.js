@@ -17,9 +17,11 @@ function remove(req, res){
     const productId = req.params.id;
     const cart = db.get('cart')
     .remove({id: productId})
-    .write()
+    .write();
+    const result = db.get('cart')
+    .value();
 
-    res.json(cart);
+    res.json(result);
 }
 
 //exports my functions
