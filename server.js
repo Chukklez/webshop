@@ -6,6 +6,7 @@ const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync ('products.json')
 const db = lowdb(adapter);
 const app = express();
+const handler = require('./handler')
 app.use(express.json());
 
 
@@ -24,6 +25,15 @@ app.get('/api/cart',(req, res) => {
 });
 
 
+// This is where we POST a product to our cart
+app.post('/api/cart/:id', (req, res) => {
+    handler.add(req, res);
+});
+
+// app.post ('get the id from the url', (req, res) => {
+//     read content from products based on id 
+//     add that product to our cart
+// });
 
 
 
